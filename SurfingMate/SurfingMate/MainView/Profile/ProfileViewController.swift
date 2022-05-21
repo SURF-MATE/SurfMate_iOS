@@ -101,42 +101,6 @@ class ProfileViewController: UIViewController {
         
         uiLayout()
     }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
-
-import SwiftUI
-// canvas 세팅
-
-struct ProfileViewControllerRepresentable: UIViewControllerRepresentable{
-    typealias UIViewControllerType = ProfileViewController
-    
-    func makeUIViewController(context: Context) -> ProfileViewController {
-        return ProfileViewController()
-    }
-    func updateUIViewController(_ uiViewController: ProfileViewController, context: Context) {
-        
-    }
-}
-
-@available(iOS 13.0.0, *)
-struct ProfileViewPreview: PreviewProvider {
-    static var previews: some View {
-        ProfileViewControllerRepresentable()
-    }
-}
-
 
 
