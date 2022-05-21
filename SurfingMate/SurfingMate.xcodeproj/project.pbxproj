@@ -14,6 +14,10 @@
 		BF24D2E828387F3900AD62BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF24D2E628387F3900AD62BC /* Main.storyboard */; };
 		BF24D2EA28387F3B00AD62BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF24D2E928387F3B00AD62BC /* Assets.xcassets */; };
 		BF24D2ED28387F3B00AD62BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF24D2EB28387F3B00AD62BC /* LaunchScreen.storyboard */; };
+		BF55E7642838AD750058506B /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7632838AD750058506B /* MainTabViewController.swift */; };
+		BF55E7672838AE320058506B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7662838AE320058506B /* ProfileViewController.swift */; };
+		BF55E76A2838AEAF0058506B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7692838AEAE0058506B /* HomeViewController.swift */; };
+		BF55E76D2838AF230058506B /* CarPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E76C2838AF230058506B /* CarPoolViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		BF24D2E928387F3B00AD62BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF24D2EC28387F3B00AD62BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF24D2EE28387F3B00AD62BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF55E7632838AD750058506B /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		BF55E7662838AE320058506B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BF55E7692838AEAE0058506B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BF55E76C2838AF230058506B /* CarPoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 		BF24D2DF28387F3900AD62BC /* SurfingMate */ = {
 			isa = PBXGroup;
 			children = (
+				BF55E7602838AD2E0058506B /* MainView */,
 				BF24D2E028387F3900AD62BC /* AppDelegate.swift */,
 				BF24D2E228387F3900AD62BC /* SceneDelegate.swift */,
 				BF24D2E428387F3900AD62BC /* ViewController.swift */,
@@ -74,13 +83,47 @@
 			path = SurfingMate;
 			sourceTree = "<group>";
 		};
+		BF55E7602838AD2E0058506B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E76B2838AEE70058506B /* CarPool */,
+				BF55E7682838AEA30058506B /* Home */,
+				BF55E7652838AE0C0058506B /* Profile */,
+				BF55E7632838AD750058506B /* MainTabViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		BF55E7652838AE0C0058506B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E7662838AE320058506B /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF55E7682838AEA30058506B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E7692838AEAE0058506B /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BF55E76B2838AEE70058506B /* CarPool */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E76C2838AF230058506B /* CarPoolViewController.swift */,
+			);
+			path = CarPool;
+			sourceTree = "<group>";
+		};
 		EC8EBC7399308BF7B4B8749D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				30BD816DDAAF222E2C6EAB9C /* Pods-SurfingMate.debug.xcconfig */,
 				3C4F000305E9A7751EA01564 /* Pods-SurfingMate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,8 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF24D2E528387F3900AD62BC /* ViewController.swift in Sources */,
+				BF55E7642838AD750058506B /* MainTabViewController.swift in Sources */,
+				BF55E76D2838AF230058506B /* CarPoolViewController.swift in Sources */,
+				BF55E7672838AE320058506B /* ProfileViewController.swift in Sources */,
 				BF24D2E128387F3900AD62BC /* AppDelegate.swift in Sources */,
 				BF24D2E328387F3900AD62BC /* SceneDelegate.swift in Sources */,
+				BF55E76A2838AEAF0058506B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
