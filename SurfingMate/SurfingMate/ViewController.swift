@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     private func goToMainView() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            let viewController = MainTabViewController()
+            let viewController = MakeRoomViewController()
             let navController = UINavigationController(rootViewController: viewController)
             navController.isNavigationBarHidden = true
             navController.modalTransitionStyle = .crossDissolve

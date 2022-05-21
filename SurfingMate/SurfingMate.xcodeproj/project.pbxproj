@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0705EE0B28390DFF00B6A527 /* MakeRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0705EE0A28390DFF00B6A527 /* MakeRoomViewController.swift */; };
-		B3B94E72250A45CF9993C065 /* Pods_SurfingMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1732F4A8C35043AD27FCB2D5 /* Pods_SurfingMate.framework */; };
+		0707971D2839810400606D79 /* Pods_SurfingMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1732F4A8C35043AD27FCB2D5 /* Pods_SurfingMate.framework */; };
 		BF24D2E128387F3900AD62BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24D2E028387F3900AD62BC /* AppDelegate.swift */; };
 		BF24D2E328387F3900AD62BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24D2E228387F3900AD62BC /* SceneDelegate.swift */; };
 		BF24D2E528387F3900AD62BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24D2E428387F3900AD62BC /* ViewController.swift */; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3B94E72250A45CF9993C065 /* Pods_SurfingMate.framework in Frameworks */,
+				0707971D2839810400606D79 /* Pods_SurfingMate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
