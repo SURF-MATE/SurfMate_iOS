@@ -26,6 +26,10 @@
 		BF55E77F2838CB790058506B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E77E2838CB780058506B /* User.swift */; };
 		BF55E7812838CD950058506B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7802838CD950058506B /* SignUpViewController.swift */; };
 		BF55E7832838CE290058506B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7822838CE290058506B /* SignUpViewModel.swift */; };
+		BF55E7852838E12E0058506B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7842838E12E0058506B /* Enum.swift */; };
+		BF55E7872838E75C0058506B /* CarPoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7862838E75C0058506B /* CarPoolCell.swift */; };
+		BF55E78A2838EABD0058506B /* CarPoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7892838EABD0058506B /* CarPoolViewModel.swift */; };
+		BF55E78E2838ECC00058506B /* DetailCarPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E78D2838ECC00058506B /* DetailCarPoolViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		BF55E77E2838CB780058506B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF55E7802838CD950058506B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF55E7822838CE290058506B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		BF55E7842838E12E0058506B /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		BF55E7862838E75C0058506B /* CarPoolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolCell.swift; sourceTree = "<group>"; };
+		BF55E7892838EABD0058506B /* CarPoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolViewModel.swift; sourceTree = "<group>"; };
+		BF55E78D2838ECC00058506B /* DetailCarPoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarPoolViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +141,8 @@
 		BF55E76B2838AEE70058506B /* CarPool */ = {
 			isa = PBXGroup;
 			children = (
-				BF55E76C2838AF230058506B /* CarPoolViewController.swift */,
+				BF55E78C2838EAE70058506B /* Detail */,
+				BF55E78B2838EAD70058506B /* Main */,
 			);
 			path = CarPool;
 			sourceTree = "<group>";
@@ -178,6 +187,7 @@
 			children = (
 				BF55E7772838BCFF0058506B /* UIKitExtension.swift */,
 				BF55E7792838C2370058506B /* CustomTextField.swift */,
+				BF55E7842838E12E0058506B /* Enum.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -188,6 +198,24 @@
 				BF55E77E2838CB780058506B /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BF55E78B2838EAD70058506B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E76C2838AF230058506B /* CarPoolViewController.swift */,
+				BF55E7862838E75C0058506B /* CarPoolCell.swift */,
+				BF55E7892838EABD0058506B /* CarPoolViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BF55E78C2838EAE70058506B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E78D2838ECC00058506B /* DetailCarPoolViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		EC8EBC7399308BF7B4B8749D /* Pods */ = {
@@ -327,13 +355,17 @@
 				BF24D2E528387F3900AD62BC /* ViewController.swift in Sources */,
 				BF55E77C2838C2D50058506B /* LoginViewModel.swift in Sources */,
 				BF55E7642838AD750058506B /* MainTabViewController.swift in Sources */,
+				BF55E78A2838EABD0058506B /* CarPoolViewModel.swift in Sources */,
 				BF55E76D2838AF230058506B /* CarPoolViewController.swift in Sources */,
 				BF55E77A2838C2370058506B /* CustomTextField.swift in Sources */,
 				BF55E7832838CE290058506B /* SignUpViewModel.swift in Sources */,
 				BF55E7672838AE320058506B /* ProfileViewController.swift in Sources */,
+				BF55E7852838E12E0058506B /* Enum.swift in Sources */,
 				BF55E7722838B51F0058506B /* LoginViewController.swift in Sources */,
 				BF55E77F2838CB790058506B /* User.swift in Sources */,
 				BF24D2E128387F3900AD62BC /* AppDelegate.swift in Sources */,
+				BF55E7872838E75C0058506B /* CarPoolCell.swift in Sources */,
+				BF55E78E2838ECC00058506B /* DetailCarPoolViewController.swift in Sources */,
 				BF24D2E328387F3900AD62BC /* SceneDelegate.swift in Sources */,
 				BF55E7812838CD950058506B /* SignUpViewController.swift in Sources */,
 				BF55E76A2838AEAF0058506B /* HomeViewController.swift in Sources */,

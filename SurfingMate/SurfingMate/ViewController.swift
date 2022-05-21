@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
@@ -58,7 +57,7 @@ class ViewController: UIViewController {
     
     private func goToLoginView() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            let vc = LoginViewController()
+            let vc = DetailCarPoolViewController()
             let navController = UINavigationController(rootViewController: vc)
             navController.isNavigationBarHidden = true
             navController.modalTransitionStyle = .crossDissolve
