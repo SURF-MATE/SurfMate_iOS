@@ -21,12 +21,21 @@ class ProfileViewController: UIViewController {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     let logOutBt = UIButton(type: .custom).then {
-            $0.setTitle("로그아웃하기", for: .normal)
+            $0.setTitle("로그아웃", for: .normal)
             $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 16)
             $0.titleLabel?.textColor = .white
             $0.backgroundColor = UIColor(red: 177/255, green: 177/255, blue: 177/255, alpha: 1)
             $0.layer.cornerRadius = 27.0
-            $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 128, bottom: 14, right: 127)
+            $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 100, bottom: 14, right: 100)
+            $0.isEnabled = false
+        }
+    let modifyInfoBt = UIButton(type: .custom).then {
+            $0.setTitle("회원정보수정", for: .normal)
+            $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 16)
+            $0.titleLabel?.textColor = .white
+            $0.backgroundColor = UIColor(red: 177/255, green: 177/255, blue: 177/255, alpha: 1)
+            $0.layer.cornerRadius = 27.0
+            $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 100, bottom: 14, right: 100)
             $0.isEnabled = false
         }
 
@@ -67,8 +76,15 @@ class ProfileViewController: UIViewController {
         }
         view.addSubview(logOutBt)
         logOutBt.snp.makeConstraints{
+            $0.width.equalTo(300)
             $0.centerX.equalToSuperview()
             $0.top.equalTo(userInfo.snp.bottom).offset(100)
+        }
+        view.addSubview(modifyInfoBt)
+        modifyInfoBt.snp.makeConstraints{
+            $0.width.equalTo(300)
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(logOutBt.snp.bottom).offset(30)
         }
     }
 
