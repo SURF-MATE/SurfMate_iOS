@@ -119,24 +119,3 @@ extension MakeRoomViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 
-import SwiftUI
-// canvas 세팅
-
-struct MakeRoomViewControllerRepresentable: UIViewControllerRepresentable{
-    typealias UIViewControllerType = MakeRoomViewController
-    
-    func makeUIViewController(context: Context) -> MakeRoomViewController {
-        return MakeRoomViewController()
-    }
-    func updateUIViewController(_ uiViewController: MakeRoomViewController, context: Context) {
-        
-    }
-}
-
-@available(iOS 13.0.0, *)
-struct MakeRoomViewPreview: PreviewProvider {
-    static var previews: some View {
-        MakeRoomViewControllerRepresentable()
-    }
-}
-
