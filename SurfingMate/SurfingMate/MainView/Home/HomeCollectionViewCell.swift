@@ -31,14 +31,14 @@ class HomeCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private var waveMeterLabel: UILabel = {
+    private var waveMeterLabel: UILabel = { // 따로 받음
         let label = UILabel()
         label.font = .systemFont(ofSize: 15, weight: .semibold)
         label.textColor = .black
         return label
     }()
     
-    private var waveSecondsLabel: UILabel = {
+    private var waveSecondsLabel: UILabel = { // 따로 받음
         let label = UILabel()
         label.font = .systemFont(ofSize: 15, weight: .semibold)
         label.textColor = .black

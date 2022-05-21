@@ -19,6 +19,7 @@
 		BF55E76A2838AEAF0058506B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7692838AEAE0058506B /* HomeViewController.swift */; };
 		BF55E76D2838AF230058506B /* CarPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E76C2838AF230058506B /* CarPoolViewController.swift */; };
 		DDFA92802838B3F400E9B023 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFA927F2838B3F400E9B023 /* HomeCollectionViewCell.swift */; };
+		DDFA92822838D55400E9B023 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFA92812838D55400E9B023 /* HomeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BF55E7692838AEAE0058506B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BF55E76C2838AF230058506B /* CarPoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolViewController.swift; sourceTree = "<group>"; };
 		DDFA927F2838B3F400E9B023 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		DDFA92812838D55400E9B023 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				BF55E7692838AEAE0058506B /* HomeViewController.swift */,
 				DDFA927F2838B3F400E9B023 /* HomeCollectionViewCell.swift */,
+				DDFA92812838D55400E9B023 /* HomeDetailViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				BF24D2E528387F3900AD62BC /* ViewController.swift in Sources */,
 				BF55E7642838AD750058506B /* MainTabViewController.swift in Sources */,
 				BF55E76D2838AF230058506B /* CarPoolViewController.swift in Sources */,
+				DDFA92822838D55400E9B023 /* HomeDetailViewController.swift in Sources */,
 				BF55E7672838AE320058506B /* ProfileViewController.swift in Sources */,
 				BF24D2E128387F3900AD62BC /* AppDelegate.swift in Sources */,
 				BF24D2E328387F3900AD62BC /* SceneDelegate.swift in Sources */,
