@@ -19,7 +19,6 @@
 		BF55E76A2838AEAF0058506B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7692838AEAE0058506B /* HomeViewController.swift */; };
 		BF55E76D2838AF230058506B /* CarPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E76C2838AF230058506B /* CarPoolViewController.swift */; };
 		BF55E7722838B51F0058506B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7712838B51F0058506B /* LoginViewController.swift */; };
-		BF55E7752838B6BF0058506B /* GodoB.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF55E7742838B6BD0058506B /* GodoB.otf */; };
 		BF55E7782838BCFF0058506B /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7772838BCFF0058506B /* UIKitExtension.swift */; };
 		BF55E77A2838C2370058506B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7792838C2370058506B /* CustomTextField.swift */; };
 		BF55E77C2838C2D50058506B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E77B2838C2D50058506B /* LoginViewModel.swift */; };
@@ -45,7 +44,6 @@
 		BF55E7692838AEAE0058506B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BF55E76C2838AF230058506B /* CarPoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolViewController.swift; sourceTree = "<group>"; };
 		BF55E7712838B51F0058506B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BF55E7742838B6BD0058506B /* GodoB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GodoB.otf; path = ../../../../../../Downloads/godoFont/GodoB.otf; sourceTree = "<group>"; };
 		BF55E7772838BCFF0058506B /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		BF55E7792838C2370058506B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BF55E77B2838C2D50058506B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			children = (
 				BF55E77D2838CB560058506B /* Model */,
 				BF55E7762838BCEA0058506B /* Extension */,
-				BF55E7732838B6AC0058506B /* Font */,
 				BF55E76E2838B4C00058506B /* LoginView */,
 				BF55E7602838AD2E0058506B /* MainView */,
 				BF24D2E028387F3900AD62BC /* AppDelegate.swift */,
@@ -163,14 +160,6 @@
 				BF55E7822838CE290058506B /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
-			sourceTree = "<group>";
-		};
-		BF55E7732838B6AC0058506B /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				BF55E7742838B6BD0058506B /* GodoB.otf */,
-			);
-			path = Font;
 			sourceTree = "<group>";
 		};
 		BF55E7762838BCEA0058506B /* Extension */ = {
@@ -270,7 +259,6 @@
 				BF24D2ED28387F3B00AD62BC /* LaunchScreen.storyboard in Resources */,
 				BF24D2EA28387F3B00AD62BC /* Assets.xcassets in Resources */,
 				BF24D2E828387F3900AD62BC /* Main.storyboard in Resources */,
-				BF55E7752838B6BF0058506B /* GodoB.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

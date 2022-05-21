@@ -11,7 +11,7 @@ import SnapKit
 
 class ProfileViewController: UIViewController {
     
-    let textLabel = UILabel().then {
+    let profile = UILabel().then {
         $0.text = "프로필"
         $0.font = .systemFont(ofSize: 25)
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -20,6 +20,24 @@ class ProfileViewController: UIViewController {
         $0.image=UIImage(named: "profile")
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
+    let viewResgiBt = UIButton(type: .custom).then {
+            $0.setTitle("내가 등록한 방", for: .normal)
+            $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 16)
+            $0.titleLabel?.textColor = .white
+            $0.backgroundColor = UIColor(red: 177/255, green: 177/255, blue: 177/255, alpha: 1)
+            $0.layer.cornerRadius = 27.0
+            $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 100, bottom: 14, right: 100)
+            $0.isEnabled = false
+        }
+    let viewAttenBt = UIButton(type: .custom).then {
+            $0.setTitle("내가 참가한 방", for: .normal)
+            $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 16)
+            $0.titleLabel?.textColor = .white
+            $0.backgroundColor = UIColor(red: 177/255, green: 177/255, blue: 177/255, alpha: 1)
+            $0.layer.cornerRadius = 27.0
+            $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 100, bottom: 14, right: 100)
+            $0.isEnabled = false
+        }
     let logOutBt = UIButton(type: .custom).then {
             $0.setTitle("로그아웃", for: .normal)
             $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 16)
@@ -29,63 +47,52 @@ class ProfileViewController: UIViewController {
             $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 100, bottom: 14, right: 100)
             $0.isEnabled = false
         }
-    let modifyInfoBt = UIButton(type: .custom).then {
-            $0.setTitle("회원정보수정", for: .normal)
-            $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 16)
-            $0.titleLabel?.textColor = .white
-            $0.backgroundColor = UIColor(red: 177/255, green: 177/255, blue: 177/255, alpha: 1)
-            $0.layer.cornerRadius = 27.0
-            $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 100, bottom: 14, right: 100)
-            $0.isEnabled = false
-        }
+
 
     let nickName = UILabel().then{
         $0.text="닉네임"
         $0.font = .systemFont(ofSize: 18)
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
-    let userInfo = UILabel().then{
-        $0.text="주로 양양에서 서핑을 타는 서핑초보입니다!"
-        $0.font = .systemFont(ofSize: 15)
-        $0.translatesAutoresizingMaskIntoConstraints = false
-    }
+
     
     func uiLayout(){
-        view.addSubview(textLabel)
-        textLabel.snp.makeConstraints {
+        view.addSubview(profile)
+        profile.snp.makeConstraints {
             $0.top.equalToSuperview().offset(120)
             $0.centerX.equalToSuperview()
             
         }
         view.addSubview(userImg)
         userImg.snp.makeConstraints {
-            $0.width.height.equalTo(100)
+            $0.width.height.equalTo(80)
             $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().offset(-180)
+            $0.centerY.equalToSuperview().offset(-170)
         }
 
         view.addSubview(nickName)
         nickName.snp.makeConstraints{
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(userImg.snp.bottom).offset(35)
+            $0.top.equalTo(userImg.snp.bottom).offset(30)
         }
-        view.addSubview(userInfo)
-        userInfo.snp.makeConstraints{
+
+        view.addSubview(viewResgiBt)
+        viewResgiBt.snp.makeConstraints{
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(nickName.snp.bottom).offset(35)
+            $0.top.equalTo(nickName.snp.bottom).offset(80)
+        }
+        view.addSubview(viewAttenBt)
+        viewAttenBt.snp.makeConstraints{
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(viewResgiBt.snp.bottom).offset(40)
         }
         view.addSubview(logOutBt)
         logOutBt.snp.makeConstraints{
             $0.width.equalTo(300)
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(userInfo.snp.bottom).offset(100)
+            $0.top.equalTo(viewAttenBt.snp.bottom).offset(40)
         }
-        view.addSubview(modifyInfoBt)
-        modifyInfoBt.snp.makeConstraints{
-            $0.width.equalTo(300)
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(logOutBt.snp.bottom).offset(30)
-        }
+
     }
 
     override func viewDidLoad() {

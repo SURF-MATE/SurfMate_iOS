@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.goToLoginView()
+            self.goToMainView()
         }
     }
     
