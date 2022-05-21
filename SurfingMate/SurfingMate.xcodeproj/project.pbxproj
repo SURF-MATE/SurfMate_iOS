@@ -18,6 +18,14 @@
 		BF55E7672838AE320058506B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7662838AE320058506B /* ProfileViewController.swift */; };
 		BF55E76A2838AEAF0058506B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7692838AEAE0058506B /* HomeViewController.swift */; };
 		BF55E76D2838AF230058506B /* CarPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E76C2838AF230058506B /* CarPoolViewController.swift */; };
+		BF55E7722838B51F0058506B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7712838B51F0058506B /* LoginViewController.swift */; };
+		BF55E7752838B6BF0058506B /* GodoB.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF55E7742838B6BD0058506B /* GodoB.otf */; };
+		BF55E7782838BCFF0058506B /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7772838BCFF0058506B /* UIKitExtension.swift */; };
+		BF55E77A2838C2370058506B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7792838C2370058506B /* CustomTextField.swift */; };
+		BF55E77C2838C2D50058506B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E77B2838C2D50058506B /* LoginViewModel.swift */; };
+		BF55E77F2838CB790058506B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E77E2838CB780058506B /* User.swift */; };
+		BF55E7812838CD950058506B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7802838CD950058506B /* SignUpViewController.swift */; };
+		BF55E7832838CE290058506B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7822838CE290058506B /* SignUpViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +44,14 @@
 		BF55E7662838AE320058506B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BF55E7692838AEAE0058506B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BF55E76C2838AF230058506B /* CarPoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolViewController.swift; sourceTree = "<group>"; };
+		BF55E7712838B51F0058506B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF55E7742838B6BD0058506B /* GodoB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GodoB.otf; path = ../../../../../../Downloads/godoFont/GodoB.otf; sourceTree = "<group>"; };
+		BF55E7772838BCFF0058506B /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		BF55E7792838C2370058506B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		BF55E77B2838C2D50058506B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		BF55E77E2838CB780058506B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BF55E7802838CD950058506B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BF55E7822838CE290058506B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +87,10 @@
 		BF24D2DF28387F3900AD62BC /* SurfingMate */ = {
 			isa = PBXGroup;
 			children = (
+				BF55E77D2838CB560058506B /* Model */,
+				BF55E7762838BCEA0058506B /* Extension */,
+				BF55E7732838B6AC0058506B /* Font */,
+				BF55E76E2838B4C00058506B /* LoginView */,
 				BF55E7602838AD2E0058506B /* MainView */,
 				BF24D2E028387F3900AD62BC /* AppDelegate.swift */,
 				BF24D2E228387F3900AD62BC /* SceneDelegate.swift */,
@@ -116,6 +136,58 @@
 				BF55E76C2838AF230058506B /* CarPoolViewController.swift */,
 			);
 			path = CarPool;
+			sourceTree = "<group>";
+		};
+		BF55E76E2838B4C00058506B /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E7702838B4FB0058506B /* SignUp */,
+				BF55E76F2838B4F70058506B /* Login */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		BF55E76F2838B4F70058506B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E7712838B51F0058506B /* LoginViewController.swift */,
+				BF55E77B2838C2D50058506B /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BF55E7702838B4FB0058506B /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E7802838CD950058506B /* SignUpViewController.swift */,
+				BF55E7822838CE290058506B /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		BF55E7732838B6AC0058506B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E7742838B6BD0058506B /* GodoB.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		BF55E7762838BCEA0058506B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E7772838BCFF0058506B /* UIKitExtension.swift */,
+				BF55E7792838C2370058506B /* CustomTextField.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BF55E77D2838CB560058506B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF55E77E2838CB780058506B /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EC8EBC7399308BF7B4B8749D /* Pods */ = {
@@ -198,6 +270,7 @@
 				BF24D2ED28387F3B00AD62BC /* LaunchScreen.storyboard in Resources */,
 				BF24D2EA28387F3B00AD62BC /* Assets.xcassets in Resources */,
 				BF24D2E828387F3900AD62BC /* Main.storyboard in Resources */,
+				BF55E7752838B6BF0058506B /* GodoB.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,12 +323,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF55E7782838BCFF0058506B /* UIKitExtension.swift in Sources */,
 				BF24D2E528387F3900AD62BC /* ViewController.swift in Sources */,
+				BF55E77C2838C2D50058506B /* LoginViewModel.swift in Sources */,
 				BF55E7642838AD750058506B /* MainTabViewController.swift in Sources */,
 				BF55E76D2838AF230058506B /* CarPoolViewController.swift in Sources */,
+				BF55E77A2838C2370058506B /* CustomTextField.swift in Sources */,
+				BF55E7832838CE290058506B /* SignUpViewModel.swift in Sources */,
 				BF55E7672838AE320058506B /* ProfileViewController.swift in Sources */,
+				BF55E7722838B51F0058506B /* LoginViewController.swift in Sources */,
+				BF55E77F2838CB790058506B /* User.swift in Sources */,
 				BF24D2E128387F3900AD62BC /* AppDelegate.swift in Sources */,
 				BF24D2E328387F3900AD62BC /* SceneDelegate.swift in Sources */,
+				BF55E7812838CD950058506B /* SignUpViewController.swift in Sources */,
 				BF55E76A2838AEAF0058506B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

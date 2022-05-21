@@ -8,6 +8,8 @@ pod 'Alamofire'
 pod 'SnapKit'
 pod 'Then'
 pod 'PromisesSwift'
+pod 'RxSwift'
+pod 'RxCocoa'
   # Pods for SurfingMate
 
 end
