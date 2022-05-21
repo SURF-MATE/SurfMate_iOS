@@ -33,15 +33,7 @@ class MakeRoomViewController: UIViewController{
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    let completeBtn = UIButton().then{
-        $0.setTitle("완료", for: .normal)
-        $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 16)
-        $0.titleLabel?.textColor = .white
-        $0.backgroundColor = UIColor(red: 177/255, green: 177/255, blue: 177/255, alpha: 1)
-        $0.layer.cornerRadius = 27.0
-        $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 100, bottom: 14, right: 100)
-        $0.isEnabled = false
-    }
+
     
     let dest = UITextField().then{
         $0.text = "내용을 입력해주세요."
