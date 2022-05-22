@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class SignUpViewController: UIViewController {
     
@@ -132,6 +133,11 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        bind()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     
@@ -259,6 +265,122 @@ extension SignUpViewController {
             $0.leading.equalTo(safeView.snp.leading).offset(26)
             $0.trailing.equalTo(safeView.snp.trailing).offset(-25)
         }
+        
+    }
+    
+    fileprivate func bind() {
+        bindInput()
+        bindOutput()
+    }
+    
+    fileprivate func bindInput() {
+        
+        backBt.rx.tap.subscribe(onNext: {
+            self.dismiss(animated: true, completion: nil)
+        }).disposed(by: disposeBag)
+        
+        nameTextField.rx.controlEvent([.editingDidEnd])
+            .map { self.nameTextField.text ?? "" }
+            .bind(to: vm.input.nameObserver)
+            .disposed(by: disposeBag)
+        
+        emailTextField.rx.controlEvent([.editingDidEnd])
+            .map { self.emailTextField.text ?? "" }
+            .bind(to: vm.input.emailObserver)
+            .disposed(by: disposeBag)
+        
+        pwTextField.rx.controlEvent([.editingDidEnd])
+            .map { self.pwTextField.text ?? "" }
+            .bind(to: vm.input.pwObserver)
+            .disposed(by: disposeBag)
+        
+        pwConfirmTextField.rx.controlEvent([.editingDidEnd])
+            .map { self.pwConfirmTextField.text ?? "" }
+            .bind(to: vm.input.pwConfirmObserver)
+            .disposed(by: disposeBag)
+        
+        maleBt.rx.tap
+            .map { Gender.male }
+            .bind(to: vm.input.genderObserver)
+            .disposed(by: disposeBag)
+        
+        femaleBt.rx.tap
+            .map { Gender.female }
+            .bind(to: vm.input.genderObserver)
+            .disposed(by: disposeBag)
+        
+        birthTextField.rx.controlEvent([.editingDidEnd])
+            .map { self.birthTextField.text ?? "" }
+            .bind(to: vm.input.birthObserver)
+            .disposed(by: disposeBag)
+        
+        signInBt.rx.tap
+            .bind(to: vm.input.signUpObserver)
+            .disposed(by: disposeBag)
+        
+    }
+    
+    fileprivate func bindOutput() {
+        
+        vm.output.emailValid.drive(onNext: {valid in
+            if !valid {
+                self.emailAlertLabel.text = "이메일 형식이 올바르지 않습니다."
+                self.emailTextField.setErrorRight()
+            } else {
+                self.emailAlertLabel.text = ""
+                self.emailTextField.setRight()
+            }
+        }).disposed(by: disposeBag)
+        
+        vm.output.pwValid.drive(onNext: { valid in
+            
+            if valid {
+                self.pwAlertLabel.text = ""
+                self.pwTextField.setRight()
+            } else {
+                self.pwAlertLabel.text = "영문자와 숫자 포함 8자 이상 입력해주세요."
+                self.pwTextField.setErrorRight()
+            }
+            
+        }).disposed(by: disposeBag)
+        
+        vm.output.pwConfirmValid.drive(onNext: { valid in
+            if valid {
+                self.pwConfirmAlertLabel.text = ""
+                self.pwConfirmTextField.setRight()
+            } else {
+                self.pwConfirmAlertLabel.text = "비밀번호가 맞지 않습니다."
+                self.pwConfirmTextField.setErrorRight()
+            }
+        }).disposed(by: disposeBag)
+        
+        vm.output.genderValid.drive(onNext: { valid in
+            switch valid {
+            case .male:
+                self.maleBt.setTitleColor(.white, for: .normal)
+                self.maleBt.backgroundColor = UIColor.rgb(red: 146, green: 206, blue: 242)
+                self.femaleBt.setTitleColor(UIColor.rgb(red: 55, green: 57, blue: 61), for: .normal)
+                self.femaleBt.backgroundColor = .white
+            case .female:
+                self.femaleBt.setTitleColor(.white, for: .normal)
+                self.femaleBt.backgroundColor = UIColor.rgb(red: 146, green: 206, blue: 242)
+                self.maleBt.setTitleColor(UIColor.rgb(red: 55, green: 57, blue: 61), for: .normal)
+                self.maleBt.backgroundColor = .white
+            case .none:
+                break
+            }
+        }).disposed(by: disposeBag)
+        
+        vm.output.buttonValid.drive(onNext: { valid in
+            if valid {
+                self.signInBt.isEnabled = true
+                self.signInBt.backgroundColor = UIColor.rgb(red: 146, green: 206, blue: 242)
+            } else {
+                self.signInBt.isEnabled = false
+                self.signInBt.backgroundColor = UIColor.rgb(red: 195, green: 195, blue: 195)
+            }
+        }).disposed(by: disposeBag)
+        
         
     }
 }

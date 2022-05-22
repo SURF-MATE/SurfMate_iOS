@@ -10,6 +10,7 @@ pod 'Then'
 pod 'PromisesSwift'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'SwiftyJSON'
   # Pods for SurfingMate
 
 end

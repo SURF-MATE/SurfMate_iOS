@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.goToLoginView()
+            self.goToMainView()
         }
     }
     
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     
     private func goToLoginView() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            let vc = DetailCarPoolViewController()
+            let vc = LoginViewController()
             let navController = UINavigationController(rootViewController: vc)
             navController.isNavigationBarHidden = true
             navController.modalTransitionStyle = .crossDissolve

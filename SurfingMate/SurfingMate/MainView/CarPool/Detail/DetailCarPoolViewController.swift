@@ -10,6 +10,8 @@ import RxSwift
 
 class DetailCarPoolViewController: UIViewController {
     
+    var carPool: CarPool
+    
     let dismissBt = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: nil)
     
     let titleLb = UILabel().then {
@@ -85,12 +87,26 @@ class DetailCarPoolViewController: UIViewController {
         $0.backgroundColor = UIColor.rgb(red: 146, green: 206, blue: 242)
         $0.layer.cornerRadius = 27.0
         $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 134, bottom: 13, right: 131)
-        $0.isEnabled = false
+        $0.isEnabled = true
+    }
+    
+    let disposeBag = DisposeBag()
+    
+    init(_ carPool: CarPool) {
+        self.carPool = carPool
+        super.init(nibName: nil, bundle: nil)
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setValue()
+        bind()
     }
     
     
@@ -99,6 +115,38 @@ class DetailCarPoolViewController: UIViewController {
 }
 
 extension DetailCarPoolViewController {
+    
+    fileprivate func setValue() {
+        titleLb.text = carPool.title
+        destValue.text = carPool.destination
+        peopleValue.text = "\(carPool.currentCnt) / \(carPool.totalCnt)"
+        dayValue.text = carPool.date
+        contentsLb.text = carPool.content
+        makerValue.text = carPool.nickName
+        
+    }
+    
+    fileprivate func bind() {
+        dismissBt.rx.tap.subscribe(onNext: {
+            self.dismiss(animated: true, completion: nil)
+        }).disposed(by: disposeBag)
+        
+        joinBt.rx.tap.subscribe(onNext: {
+            
+            if self.carPool.currentCnt < self.carPool.totalCnt {
+                self.carPool.currentCnt += 1
+                self.peopleValue.text = "\(self.carPool.currentCnt) / \(self.carPool.totalCnt)"
+            }
+            
+            if self.carPool.currentCnt == self.carPool.totalCnt {
+                self.joinBt.isEnabled = false
+                self.joinBt.backgroundColor = UIColor.rgb(red: 195, green: 195, blue: 195)
+            }
+            
+            
+        }).disposed(by: disposeBag)
+        
+    }
     
     fileprivate func setUI() {
         view.backgroundColor = .white

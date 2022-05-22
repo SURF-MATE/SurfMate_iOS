@@ -10,6 +10,8 @@ import UIKit
 
 class CarPoolCell: UICollectionViewCell {
     
+    var carPool:CarPool = CarPool()
+    
     let subjectiveLb = UILabel().then {
         $0.text = "서울시"
         $0.textColor = UIColor.rgb(red: 122, green: 122, blue: 122)
@@ -24,17 +26,6 @@ class CarPoolCell: UICollectionViewCell {
     
     let moneyView = UIView()
     
-    let maxLb = UILabel().then {
-        $0.text = "최대 250만원 지원"
-        $0.textColor = UIColor.rgb(red: 255, green: 126, blue: 68)
-        $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
-    }
-    
-    let minLb = UILabel().then {
-        $0.text = "최소 20만원"
-        $0.textColor = UIColor.rgb(red: 123, green: 123, blue: 123)
-        $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 16)
-    }
     
     let dayLb = UILabel().then {
         $0.text = "2021.12.31까지"
@@ -79,32 +70,20 @@ class CarPoolCell: UICollectionViewCell {
         
         addSubview(mainLb)
         mainLb.snp.makeConstraints {
-            $0.top.equalTo(subjectiveLb.snp.bottom).offset(16)
+            $0.top.equalTo(subjectiveLb.snp.bottom).offset(10)
             $0.leading.equalToSuperview().offset(22)
             $0.trailing.equalToSuperview().offset(-20)
-        }
-        
-        addSubview(maxLb)
-        maxLb.snp.makeConstraints {
-            $0.top.equalTo(mainLb.snp.bottom).offset(5)
-            $0.leading.equalToSuperview().offset(22)
-        }
-        
-        addSubview(minLb)
-        minLb.snp.makeConstraints {
-            $0.bottom.equalTo(maxLb.snp.bottom)
-            $0.leading.equalTo(maxLb.snp.trailing).offset(10)
         }
         
         addSubview(dayLb)
         dayLb.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(22)
-            $0.top.equalTo(maxLb.snp.bottom).offset(5)
+            $0.top.equalTo(mainLb.snp.bottom).offset(10)
         }
         
         addSubview(separator)
         separator.snp.makeConstraints {
-            $0.top.equalTo(maxLb.snp.bottom).offset(7)
+            $0.top.equalTo(mainLb.snp.bottom).offset(12)
             $0.leading.equalTo(dayLb.snp.trailing).offset(8)
             $0.width.equalTo(1)
             $0.height.equalTo(9)
@@ -114,7 +93,7 @@ class CarPoolCell: UICollectionViewCell {
         addSubview(dDayLb)
         dDayLb.snp.makeConstraints {
             $0.leading.equalTo(separator.snp.trailing).offset(8)
-            $0.top.equalTo(maxLb.snp.bottom).offset(5)
+            $0.top.equalTo(mainLb.snp.bottom).offset(10)
         }
         
     }

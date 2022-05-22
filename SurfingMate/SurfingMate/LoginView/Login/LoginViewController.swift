@@ -249,13 +249,73 @@ extension LoginViewController {
     }
     
     fileprivate func bindInput() {
+        emailTextField.rx.controlEvent([.editingDidEnd])
+            .map { self.emailTextField.text ?? "" }
+            .bind(to: vm.input.emailObserver)
+            .disposed(by: disposeBag)
         
-    }
-    
-    fileprivate func bindOutput() {
+        pwTextField.rx.controlEvent([.editingDidEnd])
+            .map { self.pwTextField.text ?? "" }
+            .bind(to: vm.input.pwObserver)
+            .disposed(by: disposeBag)
+        
         signUpButton.rx.tap.subscribe(onNext: {
             self.goToSignUp()
         }).disposed(by: disposeBag)
+        
+        logInBt.rx.tap
+            .bind(to : vm.input.loginObserver)
+            .disposed(by: disposeBag)
+    }
+    
+    fileprivate func bindOutput() {
+        
+        vm.output.emailValid.drive { valid in
+            if valid {
+                self.emailAlert.text = ""
+                self.emailTextField.setRight()
+            } else {
+                self.emailAlert.text = "이메일 형식이 올바르지 않습니다."
+                self.emailTextField.setErrorRight()
+            }
+        }.disposed(by: disposeBag)
+        
+        vm.output.pwValid.drive { valid in
+            if valid {
+                self.pwAlert.text = ""
+                self.pwTextField.setRight()
+            } else {
+                self.pwAlert.text = "영문자와 숫자 포함 8자 이상 입력해주세요."
+                self.pwTextField.setErrorRight()
+            }
+        }.disposed(by: disposeBag)
+        
+        vm.output.loginValid.drive { valid in
+            if valid {
+                self.logInBt.isEnabled = true
+                self.logInBt.backgroundColor = UIColor.rgb(red: 146, green: 206, blue: 242)
+            } else {
+                self.logInBt.isEnabled = false
+                self.logInBt.backgroundColor = UIColor.rgb(red: 177, green: 177, blue: 177)
+            }
+        }.disposed(by: disposeBag)
+        
+        vm.output.doLogin.asSignal()
+            .emit(onNext: {
+                let vc = MainTabViewController()
+                let nav = UINavigationController(rootViewController: vc)
+                nav.navigationController?.isNavigationBarHidden = true
+                nav.modalTransitionStyle = .crossDissolve
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true)
+            }).disposed(by: disposeBag)
+        
+        vm.output.doError.asSignal()
+            .emit(onNext: { error in
+                let ac = UIAlertController(title: "에러", message: error.localizedDescription, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+                self.present(ac, animated: true)
+            }).disposed(by: disposeBag)
     }
     
     func goToSignUp() {

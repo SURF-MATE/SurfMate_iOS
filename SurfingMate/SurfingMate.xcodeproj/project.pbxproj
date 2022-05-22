@@ -30,6 +30,10 @@
 		BF55E7872838E75C0058506B /* CarPoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7862838E75C0058506B /* CarPoolCell.swift */; };
 		BF55E78A2838EABD0058506B /* CarPoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E7892838EABD0058506B /* CarPoolViewModel.swift */; };
 		BF55E78E2838ECC00058506B /* DetailCarPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E78D2838ECC00058506B /* DetailCarPoolViewController.swift */; };
+		BF55E79028391FC20058506B /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55E78F28391FC20058506B /* FoundationExtension.swift */; };
+		BF6A8A6728397BDE00AFA2E5 /* HomeViewCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A8A6628397BDE00AFA2E5 /* HomeViewCellCollectionViewCell.swift */; };
+		BF6A8A692839813000AFA2E5 /* CarPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A8A682839813000AFA2E5 /* CarPool.swift */; };
+		BF6A8A6B2839A1AE00AFA2E5 /* MyBungCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A8A6A2839A1AE00AFA2E5 /* MyBungCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		BF55E7862838E75C0058506B /* CarPoolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolCell.swift; sourceTree = "<group>"; };
 		BF55E7892838EABD0058506B /* CarPoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolViewModel.swift; sourceTree = "<group>"; };
 		BF55E78D2838ECC00058506B /* DetailCarPoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarPoolViewController.swift; sourceTree = "<group>"; };
+		BF55E78F28391FC20058506B /* FoundationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
+		BF6A8A6628397BDE00AFA2E5 /* HomeViewCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF6A8A682839813000AFA2E5 /* CarPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPool.swift; sourceTree = "<group>"; };
+		BF6A8A6A2839A1AE00AFA2E5 /* MyBungCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBungCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				BF55E7662838AE320058506B /* ProfileViewController.swift */,
+				BF6A8A6A2839A1AE00AFA2E5 /* MyBungCollectionView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				BF55E7692838AEAE0058506B /* HomeViewController.swift */,
+				BF6A8A6628397BDE00AFA2E5 /* HomeViewCellCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -186,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				BF55E7772838BCFF0058506B /* UIKitExtension.swift */,
+				BF55E78F28391FC20058506B /* FoundationExtension.swift */,
 				BF55E7792838C2370058506B /* CustomTextField.swift */,
 				BF55E7842838E12E0058506B /* Enum.swift */,
 			);
@@ -196,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				BF55E77E2838CB780058506B /* User.swift */,
+				BF6A8A682839813000AFA2E5 /* CarPool.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -357,17 +369,21 @@
 				BF55E7642838AD750058506B /* MainTabViewController.swift in Sources */,
 				BF55E78A2838EABD0058506B /* CarPoolViewModel.swift in Sources */,
 				BF55E76D2838AF230058506B /* CarPoolViewController.swift in Sources */,
+				BF6A8A6728397BDE00AFA2E5 /* HomeViewCellCollectionViewCell.swift in Sources */,
 				BF55E77A2838C2370058506B /* CustomTextField.swift in Sources */,
 				BF55E7832838CE290058506B /* SignUpViewModel.swift in Sources */,
 				BF55E7672838AE320058506B /* ProfileViewController.swift in Sources */,
 				BF55E7852838E12E0058506B /* Enum.swift in Sources */,
+				BF6A8A692839813000AFA2E5 /* CarPool.swift in Sources */,
 				BF55E7722838B51F0058506B /* LoginViewController.swift in Sources */,
 				BF55E77F2838CB790058506B /* User.swift in Sources */,
+				BF6A8A6B2839A1AE00AFA2E5 /* MyBungCollectionView.swift in Sources */,
 				BF24D2E128387F3900AD62BC /* AppDelegate.swift in Sources */,
 				BF55E7872838E75C0058506B /* CarPoolCell.swift in Sources */,
 				BF55E78E2838ECC00058506B /* DetailCarPoolViewController.swift in Sources */,
 				BF24D2E328387F3900AD62BC /* SceneDelegate.swift in Sources */,
 				BF55E7812838CD950058506B /* SignUpViewController.swift in Sources */,
+				BF55E79028391FC20058506B /* FoundationExtension.swift in Sources */,
 				BF55E76A2838AEAF0058506B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,3 +13,9 @@ enum TextFieldState {
     case login
     case search
 }
+
+enum Gender {
+    case male
+    case female
+    case none
+}
