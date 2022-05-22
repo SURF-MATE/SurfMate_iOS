@@ -115,7 +115,7 @@ class SignUpViewModel {
     func signUp() -> Observable<User> {
         
         return Observable.create { observer in
-            let url = "http://jwyang.shop:8080/api/v1/member/signup"
+            let url = "http://www.debinserver.shop:8080/api/v1/member/signup"
             let parameter = self.user.toDic()
             
             let header:HTTPHeaders = [

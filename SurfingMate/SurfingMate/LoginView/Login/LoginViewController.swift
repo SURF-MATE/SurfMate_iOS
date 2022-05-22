@@ -303,11 +303,9 @@ extension LoginViewController {
         vm.output.doLogin.asSignal()
             .emit(onNext: {
                 let vc = MainTabViewController()
-                let nav = UINavigationController(rootViewController: vc)
-                nav.navigationController?.isNavigationBarHidden = true
-                nav.modalTransitionStyle = .crossDissolve
-                nav.modalPresentationStyle = .fullScreen
-                self.present(nav, animated: true)
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
             }).disposed(by: disposeBag)
         
         vm.output.doError.asSignal()

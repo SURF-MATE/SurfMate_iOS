@@ -11,6 +11,8 @@ import Alamofire
 
 class User: Codable {
     
+    static var instance = User()
+    
     var email: String = ""
     var password:String = ""
     var nickName:String = ""

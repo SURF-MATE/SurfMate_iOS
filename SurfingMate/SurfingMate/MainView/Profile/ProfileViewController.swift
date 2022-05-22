@@ -29,7 +29,6 @@ class ProfileViewController: UIViewController {
             $0.backgroundColor = UIColor.rgb(red: 146, green: 206, blue: 242)
             $0.layer.cornerRadius = 27.0
             $0.contentEdgeInsets = UIEdgeInsets(top: 15, left: 100, bottom: 14, right: 100)
-    
         }
     let viewAttenBt = UIButton(type: .custom).then {
             $0.setTitle("내가 참가한 방", for: .normal)
@@ -52,7 +51,7 @@ class ProfileViewController: UIViewController {
 
 
     let nickName = UILabel().then{
-        $0.text="닉네임"
+        $0.text = User.instance.nickName
         $0.font = .systemFont(ofSize: 18)
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -100,12 +99,12 @@ class ProfileViewController: UIViewController {
     
     func bind() {
         viewResgiBt.rx.tap.subscribe(onNext: {
-            let vc = MyBungCollectionView("http://jwyang.shop:8080/api/v1/carpool/my-room")
+            let vc = MyBungCollectionView("http://www.debinserver.shop:8080/api/v1/carpool/my-room")
             self.present(vc, animated: true)
         }).disposed(by: disposeBag)
         
         viewAttenBt.rx.tap.subscribe(onNext: {
-            let vc = MyBungCollectionView("http://jwyang.shop:8080/api/v1/carpool/my-enter-room")
+            let vc = MyBungCollectionView("http://www.debinserver.shop:8080/api/v1/carpool/my-enter-room")
             self.present(vc, animated: true)
         }).disposed(by: disposeBag)
         

@@ -48,6 +48,7 @@ extension UITextField {
         let imageView = UIImageView(frame: CGRect.init(x: 10, y: 0, width: 21, height: 21))
         
         imageView.image = image
+        imageView.tintColor = UIColor.rgb(red: 146, green: 206, blue: 242)
         imageView.contentMode = .scaleAspectFit
         wrapperView.addSubview(imageView)
         
@@ -62,6 +63,7 @@ extension UITextField {
         
         imageView.image = UIImage(named: "tfAlert")
         imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = UIColor.rgb(red: 146, green: 206, blue: 242)
         wrapperView.addSubview(imageView)
         imageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -74,11 +76,13 @@ extension UITextField {
     func setRight() {
         let clearButton = UIButton(type: .custom)
         clearButton.setImage(UIImage(named: "tfCancel")!, for: .normal)
+        clearButton.tintColor = UIColor.rgb(red: 146, green: 206, blue: 242)
         clearButton.frame = CGRect(x: 0, y: 0, width: 36, height: 36)
         clearButton.addTarget(self, action: #selector(UITextField.clear), for: .touchUpInside)
         self.addTarget(self, action: #selector(UITextField.displayClearButtonIfNeeded), for: .editingDidBegin)
         self.addTarget(self, action: #selector(UITextField.displayClearButtonIfNeeded), for: .editingChanged)
         self.rightView = clearButton
+        
         self.rightViewMode = .whileEditing
     }
     

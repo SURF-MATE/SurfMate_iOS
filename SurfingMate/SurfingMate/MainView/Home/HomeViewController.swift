@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .white
         safeView.addSubview(homeCV)
         homeCV.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(30)
+            $0.top.equalToSuperview().offset(15)
             $0.leading.trailing.bottom.equalToSuperview()
             
         }
@@ -69,9 +69,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let post = posts[indexPath.row]
-//        let vc = DetailCarPoolViewController(post)
-//        self.present(vc, animated: true)
+        let vc = DetailHomeViewController()
+        self.present(vc, animated: true)
     }
     
     

@@ -22,9 +22,16 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func setupViewControllers() {
-        let homeViewController = templateNavController(unselectedImage: UIImage(systemName: "house")!, selectedImage: UIImage(systemName: "house.fill")!, rootViewController: HomeViewController())
-            let carPoolViewController = templateNavController(unselectedImage: UIImage(systemName: "car")!, selectedImage: UIImage(systemName: "car.fill")!, rootViewController: CarPoolViewController())
-            let profileViewController = templateNavController(unselectedImage: UIImage(systemName: "person.crop.circle")!, selectedImage: UIImage(systemName: "person.crop.circle.fill")!, rootViewController: ProfileViewController())
+        
+        let homeImage = UIImage(systemName: "house.fill")!.withTintColor(UIColor.rgb(red: 146, green: 206, blue: 242), renderingMode: .alwaysOriginal)
+        
+        let carImage = UIImage(systemName: "car.fill")!.withTintColor(UIColor.rgb(red: 146, green: 206, blue: 242), renderingMode: .alwaysOriginal)
+        
+        let profileImage = UIImage(systemName: "person.crop.circle.fill")!.withTintColor(UIColor.rgb(red: 146, green: 206, blue: 242), renderingMode: .alwaysOriginal)
+        
+        let homeViewController = templateNavController(unselectedImage: UIImage(systemName: "house")!, selectedImage: homeImage, rootViewController: HomeViewController())
+            let carPoolViewController = templateNavController(unselectedImage: UIImage(systemName: "car")!, selectedImage: carImage, rootViewController: CarPoolViewController())
+            let profileViewController = templateNavController(unselectedImage: UIImage(systemName: "person.crop.circle")!, selectedImage: profileImage, rootViewController: ProfileViewController())
             tabBar.tintColor = .black
             viewControllers = [homeViewController, carPoolViewController, profileViewController]
             

@@ -66,7 +66,7 @@ class CarPoolViewController: UIViewController {
     
     
     @objc func fetchData() {
-        let url = "http://www.jwyang.shop:8080/api/v1/carpool"
+        let url = "http://www.debinserver.shop:8080/api/v1/carpool"
         
         AF.request(url, method: .get)
             .validate(statusCode: 200..<300)

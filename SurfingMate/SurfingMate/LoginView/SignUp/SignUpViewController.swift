@@ -381,6 +381,22 @@ extension SignUpViewController {
             }
         }).disposed(by: disposeBag)
         
+        vm.output.goSignUp.asSignal().emit(onNext: { value in
+            User.instance = value
+            let viewController = MainTabViewController()
+            let navController = UINavigationController(rootViewController: viewController)
+            navController.isNavigationBarHidden = true
+            navController.modalTransitionStyle = .crossDissolve
+            navController.modalPresentationStyle = .fullScreen
+            self.present(navController, animated: true)
+        }).disposed(by: disposeBag)
+        
+        vm.output.errorValue.asSignal()
+            .emit(onNext: { error in
+                let ac = UIAlertController(title: "에러", message: error.localizedDescription, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+                self.present(ac, animated: true)
+            }).disposed(by: disposeBag)
         
     }
 }

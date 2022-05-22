@@ -34,6 +34,9 @@
 		BF6A8A6728397BDE00AFA2E5 /* HomeViewCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A8A6628397BDE00AFA2E5 /* HomeViewCellCollectionViewCell.swift */; };
 		BF6A8A692839813000AFA2E5 /* CarPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A8A682839813000AFA2E5 /* CarPool.swift */; };
 		BF6A8A6B2839A1AE00AFA2E5 /* MyBungCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A8A6A2839A1AE00AFA2E5 /* MyBungCollectionView.swift */; };
+		BF6A8A6D2839D53D00AFA2E5 /* CustomComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A8A6C2839D53C00AFA2E5 /* CustomComponent.swift */; };
+		BF6A8A6F2839D62900AFA2E5 /* DetailHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A8A6E2839D62900AFA2E5 /* DetailHomeViewController.swift */; };
+		BF6A8A712839D76000AFA2E5 /* DetailHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A8A702839D76000AFA2E5 /* DetailHomeViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		BF6A8A6628397BDE00AFA2E5 /* HomeViewCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF6A8A682839813000AFA2E5 /* CarPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPool.swift; sourceTree = "<group>"; };
 		BF6A8A6A2839A1AE00AFA2E5 /* MyBungCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBungCollectionView.swift; sourceTree = "<group>"; };
+		BF6A8A6C2839D53C00AFA2E5 /* CustomComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponent.swift; sourceTree = "<group>"; };
+		BF6A8A6E2839D62900AFA2E5 /* DetailHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHomeViewController.swift; sourceTree = "<group>"; };
+		BF6A8A702839D76000AFA2E5 /* DetailHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHomeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,8 @@
 			children = (
 				BF55E7692838AEAE0058506B /* HomeViewController.swift */,
 				BF6A8A6628397BDE00AFA2E5 /* HomeViewCellCollectionViewCell.swift */,
+				BF6A8A6E2839D62900AFA2E5 /* DetailHomeViewController.swift */,
+				BF6A8A702839D76000AFA2E5 /* DetailHomeViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 			children = (
 				BF55E7772838BCFF0058506B /* UIKitExtension.swift */,
 				BF55E78F28391FC20058506B /* FoundationExtension.swift */,
+				BF6A8A6C2839D53C00AFA2E5 /* CustomComponent.swift */,
 				BF55E7792838C2370058506B /* CustomTextField.swift */,
 				BF55E7842838E12E0058506B /* Enum.swift */,
 			);
@@ -365,6 +374,7 @@
 			files = (
 				BF55E7782838BCFF0058506B /* UIKitExtension.swift in Sources */,
 				BF24D2E528387F3900AD62BC /* ViewController.swift in Sources */,
+				BF6A8A712839D76000AFA2E5 /* DetailHomeViewCell.swift in Sources */,
 				BF55E77C2838C2D50058506B /* LoginViewModel.swift in Sources */,
 				BF55E7642838AD750058506B /* MainTabViewController.swift in Sources */,
 				BF55E78A2838EABD0058506B /* CarPoolViewModel.swift in Sources */,
@@ -378,10 +388,12 @@
 				BF55E7722838B51F0058506B /* LoginViewController.swift in Sources */,
 				BF55E77F2838CB790058506B /* User.swift in Sources */,
 				BF6A8A6B2839A1AE00AFA2E5 /* MyBungCollectionView.swift in Sources */,
+				BF6A8A6D2839D53D00AFA2E5 /* CustomComponent.swift in Sources */,
 				BF24D2E128387F3900AD62BC /* AppDelegate.swift in Sources */,
 				BF55E7872838E75C0058506B /* CarPoolCell.swift in Sources */,
 				BF55E78E2838ECC00058506B /* DetailCarPoolViewController.swift in Sources */,
 				BF24D2E328387F3900AD62BC /* SceneDelegate.swift in Sources */,
+				BF6A8A6F2839D62900AFA2E5 /* DetailHomeViewController.swift in Sources */,
 				BF55E7812838CD950058506B /* SignUpViewController.swift in Sources */,
 				BF55E79028391FC20058506B /* FoundationExtension.swift in Sources */,
 				BF55E76A2838AEAF0058506B /* HomeViewController.swift in Sources */,

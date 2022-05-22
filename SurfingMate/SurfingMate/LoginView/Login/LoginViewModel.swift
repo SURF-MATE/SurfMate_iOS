@@ -71,7 +71,7 @@ class LoginViewModel {
     
     func doLogin() -> Observable<Void> {
         return Observable<Void>.create { observer in
-            let url = "http://www.jwyang.shop:8080/api/v1/member/login"
+            let url = "http://www.debinserver.shop:8080/api/v1/member/login"
             let parameters:Parameters = [
                 "email": self.email,
                 "password":self.pw
